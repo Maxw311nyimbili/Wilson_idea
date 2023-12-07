@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
+}
+form{
+    display: block;
+    width: 80%;
+    margin-left: 15.5%;
+}
+.name_area{
+    outline: none;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+/* :focus gives access to control what happens to the text area of the input bar when cliked */
+.name_area:focus{
+    border: 2px solid lightblue;
+}
+.subject_choice{
+    width: 30%;
+    padding: 3px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid lightblue;
+}
+.subject_choice:focus{
+   border: 2px solid lightblue;
+}
+
+.first_two{
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.request_statement{
+    padding-top: 2px;
+    margin-bottom: 1px;
+    font-size:small;
+}

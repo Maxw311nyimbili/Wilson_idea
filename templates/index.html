@@ -2,24 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='scripts/reflector.js')}}" defer></script>
     <title>Title</title>
 </head>
 <body>
-<p>{{title}}</p>
-<p>{{name}}</p>
-    <form name="passdata" action="." method="post">
-            <input type="text" placeholder="Enter name" name="name">
-            <select name="subject" id="cars">
+
+    <form class="form" name="passdata" action="." method="post" enctype="multipart/form-data">
+
+        <div class="first_two">
+            <input class="name_area" type="text" placeholder="Enter name" name="name">
+            <select class="subject_choice" name="subject" id="cars">
                 <option value="computer science">Computer science</option>
                 <option value="Math level 1"> Math level 1</option>
                 <option value="Math level 2">Math level 2</option>
                 <option value="Physics">Physics</option>
               </select>
-            <input type="text" placeholder="Enter email address" name="email">
-            <input type="datetime-local" name="date" id="s">
-        <input type="checkbox" name="yes" id="">Yes
-        <input type="checkbox" name="no" id="fg">No
-          <input type="submit" name="submit" id="nm">
-        </form>
+        </div>
+
+        <div class="first_two">
+            <input class="name_area" type="text" placeholder="Enter email address" name="email">
+        </div>
+
+        <div>
+            <label style="font-size: small;">Do you need a tutorial session:</label>
+            <input type="checkbox" name="yes" id="green_indicator" onclick="revealer()" >Yes
+            <input type="checkbox" name="no" id="fg">No <br>
+        </div>
+
+        <div style="display: none;" id="choose_date">
+            <p class="request_statement">When would you like to meet:</p>
+            <input class="subject_choice "  type="datetime-local" name="date">
+        </div>
+        <br>
+
+        <input type="file" name="file">
+        <input type="submit" name="submit" id="##" >
+        <p style="font-size: small; color: green;">{{name}}</p>
+        <p style="font-size: small; color: green;">{{name_1}}</p>
+    </form>
     </body>
 </html>
