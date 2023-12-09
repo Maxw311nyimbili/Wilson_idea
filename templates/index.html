@@ -31,12 +31,14 @@
         </div>
 
         <div style="display: none;" id="choose_date">
-            <p class="request_statement">When would you like to meet:</p>
+            <p class="request_statement">When would you like to have a Zoom call:</p>
             <input class="subject_choice "  type="datetime-local" name="date">
+            <p style="font-size: small; color: red;">{{error_1}}</p>
         </div>
         <br>
 
         <input type="file" name="file">
+        <p style="font-size: small; color: red;">{{error}}</p>
         <input type="submit" name="submit" id="##" >
         <p style="font-size: small; color: green;">{{name}}</p>
         <p style="font-size: small; color: green;">{{name_1}}</p>
